@@ -1,21 +1,17 @@
 import React, { useState } from "react";
 import {
   Box,
-  MediaQuery,
-  Paper,
   createStyles,
   keyframes,
   Stepper,
-  TextInput,
-  rem,
-  Title,
   Container,
 } from "@mantine/core";
-import { useForm } from "@mantine/form";
-import RegisterForm from "../components/RegisterForm";
-import EmailConfirmationForm from "../components/EmailConfirmationForm";
-import FriendFinder from "../components/FriendFinder";
-import PersonalTopics from "../components/PersonalTopics";
+import {
+  FriendFinderForm,
+  PersonalTopicsForm,
+  RegisterForm,
+  EmailConfirmationForm,
+} from "../components/forms";
 
 const slide = keyframes({
   "0%": { backgroundPosition: "0% 50%" },
@@ -91,14 +87,14 @@ const Register = () => {
             label="Find your Friends"
             description="Let's cast some friends"
           >
-            <FriendFinder />
+            <FriendFinderForm />
           </Stepper.Step>
 
           <Stepper.Step
             label="Pick your interests"
             description="Now capture your interests"
           >
-            <PersonalTopics />
+            <PersonalTopicsForm />
           </Stepper.Step>
         </Stepper>
       </Container>
